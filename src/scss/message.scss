@@ -1,0 +1,15 @@
+.form {
+  &--success-message {
+    color: $primary;
+    font-weight: 700;
+    font-size: $font-size-6;
+    margin-bottom: $spacing-medium;
+  }
+
+  &--error-message, &--error {
+    color: $red;
+    font-weight: 700;
+    font-size: $font-size-6;
+    margin-bottom: $spacing-medium;
+  }
+}
