@@ -1,51 +1,53 @@
-# react-wp-gql
+# react-wp-form
 
-> WordPress Rendering and Routing for WP-GraphQL.
+> Form rendering intended to be used alongside react-w-gql and WP-GraphQL.
 
-![GitHub](https://img.shields.io/github/license/jonshipman/react-wp-gql) ![GitHub last commit](https://img.shields.io/github/last-commit/jonshipman/react-wp-gql)
+![GitHub](https://img.shields.io/github/license/jonshipman/react-wp-form) ![GitHub last commit](https://img.shields.io/github/last-commit/jonshipman/react-wp-form)
 
 ## Install
 
 ```bash
-yarn add https://github.com/jonshipman/react-wp-gql
+yarn add https://github.com/jonshipman/react-wp-form
 ```
 
 ## Usage
 
 ```jsx
-// React
-import React from "react";
-import { Switch, Route } from "react-router-dom";
-import { WordPressRoutes, NodeProvider } from "react-boilerplate-nodes";
-import { FormGroup } from "react-boilerplate-leadform";
-import { Header, Footer, Main } from "./layout";
-import { Home } from "./home";
-import * as queries from "./gql/queries";
-import "./app.scss";
+import React, { useState } from "react";
+import { LeadForm, Valid, LeadFormGroup } from "react-wp-form";
+import { gqlUrl } from "../config";
 
-const nodeProps = {
-  queries,
-  components: {
-    FormGroup,
-  },
+export const ContactForm = (props) => {
+  return (
+    <div>
+      <LeadForm {...props}>
+        <LeadFormGroup
+          id="yourName"
+          placeholder="Your Name"
+          valid={Valid.NotEmptyString}
+          error="You must include a name."
+        />
+        <LeadFormGroup
+          id="email"
+          placeholder="Your Email"
+          type="email"
+          valid={Valid.Email}
+          error="You must include a email."
+          className={`w-50-l fl-l pr2-l`}
+        />
+        <LeadFormGroup
+          id="phone"
+          placeholder="Your Phone"
+          type="tel"
+          error="Invalid phone."
+          valid={Valid.Phone}
+          className={`w-50-l fl-l pl2-l`}
+        />
+        <LeadFormGroup id="message" placeholder="Message" type="textarea" />
+      </LeadForm>
+    </div>
+  );
 };
-
-export const App = () => (
-  <NodeProvider {...nodeProps}>
-    <Header />
-    <Main>
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-
-        <WordPressRoutes />
-      </Switch>
-    </Main>
-    <Footer />
-  </NodeProvider>
-);
-
 ```
 
 ## License
