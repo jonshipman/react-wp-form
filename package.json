@@ -54,5 +54,8 @@
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^5.4.0"
+  },
+  "dependencies": {
+    "react-dropzone": "^11.2.4"
   }
 }
