@@ -3,7 +3,7 @@ import { useDropzone } from "react-dropzone";
 
 import { HTTPRequest } from "./HttpRequest";
 import { isMobile } from "./isMobile";
-import { UploadItem } from "./UploadItem";
+import { UploadItem } from "./Item";
 import { Loading } from "../control";
 import { LoadingError } from "./LoadingError";
 
