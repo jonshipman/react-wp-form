@@ -45,6 +45,7 @@ export const LeadForm = (props) => {
     form: formProp,
     loading: loadingProp,
     onCompleted: onCompletedProp = () => {},
+    beforeSubmit,
   } = props;
 
   const {
@@ -190,6 +191,7 @@ export const LeadForm = (props) => {
             })}
         </GroupWrap>
       </div>
+      {beforeSubmit}
       <div className="form--leadform-btn" style={{ marginBottom: 0 }}>
         <Button
           loading={loadingMemo}
