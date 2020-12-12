@@ -44,6 +44,7 @@ export const LeadForm = (props) => {
     className: classNameProp,
     form: formProp,
     loading: loadingProp,
+    onCompleted: onCompletedProp = () => {},
   } = props;
 
   const {
@@ -82,6 +83,8 @@ export const LeadForm = (props) => {
     if (success) {
       setCompleted(true);
       setMessage(null);
+      onCompletedProp({ ...form });
+      setForm({});
     } else {
       setMessage(errorMessage);
     }
