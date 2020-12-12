@@ -1,11 +1,12 @@
 $btn-trans: background-color 0.15s ease-in-out, color 0.15s ease-in;
+$btn-secondary: #f4f4f4 !default;
 
 .form {
   &--leadform-btn {
     text-align: right;
   }
 
-  &--button {
+  &--btn {
     cursor: pointer;
     text-decoration: none;
     transition: $btn-trans;
@@ -14,7 +15,7 @@ $btn-trans: background-color 0.15s ease-in-out, color 0.15s ease-in;
     padding-bottom: $spacing-small;
     padding-right: $spacing-large;
     padding-left: $spacing-large;
-    color: $secondary;
+    color: $btn-secondary;
     background-color: $primary;
     border: 0;
 
@@ -22,7 +23,7 @@ $btn-trans: background-color 0.15s ease-in-out, color 0.15s ease-in;
     &:focus {
       transition: $btn-trans;
       background-color: $secondary;
-      color: $primary;
+      color: $btn-secondary;
     }
 
     &-loading {

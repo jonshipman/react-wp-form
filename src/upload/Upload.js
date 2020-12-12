@@ -21,7 +21,7 @@ export const Upload = ({
   loadingComponent = Loading,
   loadingErrorComponent = LoadingError,
   previewAltImages,
-  progressBarClassName = "bg-primary",
+  progressBarClassName = "form--progress",
   actionName,
   post = {},
   ...props
@@ -187,7 +187,7 @@ export const Upload = ({
   );
 
   const rootProps = getRootProps({
-    className: `bg-near-white ba b--moon-gray pa2 moon-gray f6 mb3 relative z-1 pointer tc overflow-hidden ${className}`,
+    className: `form--upload ${className}`,
   });
 
   return (

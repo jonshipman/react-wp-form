@@ -1,10 +1,9 @@
-const webpack = require("webpack");
 const path = require("path");
 
 module.exports = {
   stats: "errors-only",
 
-  entry: ["./src/index", "./src/scss/style.scss"],
+  entry: "./src/index.js",
 
   output: {
     library: "react-wp-form",

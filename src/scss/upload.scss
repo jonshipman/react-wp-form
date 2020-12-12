@@ -1,0 +1,21 @@
+.form {
+  &--upload {
+    background-color: #f4f4f4;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc;
+    padding: $spacing-small;
+    color: #ccc;
+    font-size: $font-size-6;
+    margin-bottom: $spacing-medium;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  &--progress {
+    background-color: $primary;
+  }
+}

@@ -8,6 +8,7 @@ import React, {
   useRef,
   useCallback,
 } from "react";
+import { FormError } from "./FormError";
 
 const FormGroupContext = createContext({});
 
@@ -96,7 +97,6 @@ const usePreviousValue = (value) => {
 
 let Input = (
   {
-    width = 100,
     id,
     value,
     type = "text",
@@ -107,7 +107,6 @@ let Input = (
     loading,
     options,
     idProp,
-    style = {},
     ...props
   },
   ref,
@@ -141,7 +140,6 @@ let Input = (
     case "checkbox":
     case "radio":
       Type = Checkbox;
-      width = "auto";
       props.options = options;
       props.type = type;
       break;
@@ -154,15 +152,6 @@ let Input = (
   const className = `${baseClassName} ${baseClassName}-${type} ${
     classNameProp || ""
   }`;
-
-  const _width = useMemo(
-    () => (parseInt(width) === `${width}` ? `${width}%` : width),
-    [width],
-  );
-
-  if (width) {
-    style.width = _width;
-  }
 
   const ValidityCheck = useCallback(
     (currentValue) => {
@@ -251,12 +240,7 @@ let FormGroup = (
   const LabelComponent = Label;
   let LabelProps = { htmlFor: id };
 
-  const FormGroupProps = { className: "form--group" };
-  if (replaceClass) {
-    FormGroupProps.className = className;
-  } else {
-    FormGroupProps.className = `${FormGroupProps.className} ${className}`;
-  }
+  const FormGroupProps = { className: `form--group ${className || "w-100"}` };
 
   return (
     <FormGroupContext.Provider value={{ isValid, validProp, setIsValid }}>
