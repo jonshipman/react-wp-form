@@ -8,6 +8,7 @@ import { Loading } from "../control";
 import { LoadingError } from "./LoadingError";
 
 export const Upload = ({
+  uploadText,
   className = "",
   multiple = false,
   onStart = () => {},
@@ -198,7 +199,10 @@ export const Upload = ({
       ) : isDragActive ? (
         <p>Drop the files here ...</p>
       ) : (
-        <p>Drag 'n' drop some files here, or click to select files</p>
+        <p>
+          {uploadText ||
+            "Drag 'n' drop some files here, or click to select files"}
+        </p>
       )}
       {files.length > 0 &&
         files.map((file) => (
