@@ -132,6 +132,10 @@ export const LeadForm = (props) => {
         trigger.current = valid;
       }
 
+      if (!triggerField.current) {
+        trigger.current = true;
+      }
+
       errors.current = { ...errors.current, [id]: !valid };
     },
     [errors, triggerField, trigger],
