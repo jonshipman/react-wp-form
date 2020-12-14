@@ -248,7 +248,7 @@ let FormGroup = (
       <div {...FormGroupProps}>
         {label && <LabelComponent {...LabelProps}>{label}</LabelComponent>}
         <InputComponent {...InputProps} {...{ ref }} />
-        {!isValid && error ? (
+        {props.value !== undefined && !isValid && error ? (
           <div>
             <ErrorHandlingComponent {...{ onError, id: idProp, ...props }} />
             <FormError>{error}</FormError>
