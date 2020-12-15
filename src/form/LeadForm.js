@@ -45,6 +45,7 @@ export const LeadForm = (props) => {
     form: formProp,
     loading: loadingProp,
     onCompleted: onCompletedProp = () => {},
+    onError: onErrorProp,
     beforeSubmit,
   } = props;
 
@@ -88,6 +89,9 @@ export const LeadForm = (props) => {
       setForm({});
     } else {
       setMessage(errorMessage);
+      if (onErrorProp) {
+        onErrorProp({ data });
+      }
     }
   };
 
