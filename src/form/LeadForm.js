@@ -112,7 +112,7 @@ export const LeadForm = (props) => {
 
     const __f = {};
     fields.current.forEach((key) => {
-      if (!form[key]) {
+      if (!form[key] || form[key] === undefined) {
         __f[key] = "";
       }
     });
