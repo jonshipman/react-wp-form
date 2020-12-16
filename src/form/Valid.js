@@ -6,11 +6,11 @@ export const Valid = {
   },
 
   Email: function (v) {
-    return /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(v);
+    return /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(v || "");
   },
 
   Phone: function (v) {
-    const check = phone(v, "", true);
+    const check = phone(v || "", "", true);
     return check.length > 0;
   },
 
