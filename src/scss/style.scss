@@ -1,9 +1,9 @@
 $primary: #586f7c !default;
 $secondary: #f4f4f9 !default;
 
-$breakpoint-not-small: 'screen and (min-width: 30em)' !default;
-$breakpoint-medium: 'screen and (min-width: 30em) and (max-width: 60em)' !default;
-$breakpoint-large: 'screen and (min-width: 60em)' !default;
+$breakpoint-not-small: "screen and (min-width: 30em)" !default;
+$breakpoint-medium: "screen and (min-width: 30em) and (max-width: 60em)" !default;
+$breakpoint-large: "screen and (min-width: 60em)" !default;
 
 $spacing-extra-small: 0.25rem !default;
 $spacing-small: 0.5rem !default;
@@ -21,22 +21,29 @@ $font-size-2: 2.25rem !default;
 $font-size-3: 1.5rem !default;
 $font-size-4: 1.25rem !default;
 $font-size-5: 1rem !default;
-$font-size-6: .875rem !default;
-$font-size-7: .75rem !default;
+$font-size-6: 0.875rem !default;
+$font-size-7: 0.75rem !default;
 $red: #ff4136 !default;
 $light-silver: #aaa !default;
 
 .form {
   &--leadform {
-    .cf:before, .cf:after { content: " "; display: table; }
-    .cf:after { clear: both; }
-    .cf { *zoom: 1; }
-
-    @import "./button.scss";
-    @import "./message.scss";
-    @import "./form-group.scss";
-    @import "./loading.scss";
+    .cf:before,
+    .cf:after {
+      content: " ";
+      display: table;
+    }
+    .cf:after {
+      clear: both;
+    }
+    .cf {
+      *zoom: 1;
+    }
   }
 }
 
+@import "./button.scss";
+@import "./message.scss";
+@import "./form-group.scss";
+@import "./loading.scss";
 @import "./upload.scss";
