@@ -1,6 +1,6 @@
 {
   "name": "react-wp-form",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Complementary package to react-wp-gql and wp-react-form",
   "author": "jonshipman",
   "license": "Apache",
@@ -28,7 +28,8 @@
     "@apollo/client": "^3.2.5",
     "react": "^16.8.0 || ^17.0.1",
     "react-dom": "^16.8.0 || ^17.0.1",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "node-sass": "4.14.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
@@ -44,7 +45,6 @@
     "html-webpack-plugin": "^3.0.0",
     "husky": "^0.14.3",
     "lint-staged": "^7.3.0",
-    "node-sass": "4.14.1",
     "phone": "^2.4.17",
     "prettier": "^2.0.4",
     "react-syntax-highlighter": "^12.2.1",
