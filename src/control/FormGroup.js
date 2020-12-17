@@ -240,7 +240,9 @@ let FormGroup = (
   const LabelComponent = Label;
   let LabelProps = { htmlFor: id };
 
-  const FormGroupProps = { className: `form--group ${className || "w-100"}` };
+  const FormGroupProps = {
+    className: `form--group form--group-for-${idProp} ${className || "w-100"}`,
+  };
 
   return (
     <FormGroupContext.Provider value={{ isValid, validProp, setIsValid }}>
