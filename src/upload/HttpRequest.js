@@ -6,7 +6,7 @@ export const HTTPRequest = ({
   BACKEND_URL,
   actionName = "media_upload",
 }) => {
-  const url = `${BACKEND_URL}/wp_boilerplate_upload_ajax?action=${actionName}`;
+  const url = `${BACKEND_URL}/wrg_ajax?action=${actionName}`;
 
   return new Promise((res, rej) => {
     const request = new XMLHttpRequest();
