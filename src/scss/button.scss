@@ -1,4 +1,3 @@
-
 .form {
   $btn-trans: background-color 0.15s ease-in-out, color 0.15s ease-in;
   $btn-secondary: #f4f4f4 !default;
@@ -33,10 +32,12 @@
 
     &-wrap-db {
       display: flex;
+      align-items: flex-start;
     }
 
     &-wrap-dib {
       display: inline-flex;
+      align-items: flex-start;
     }
 
     &.db {
