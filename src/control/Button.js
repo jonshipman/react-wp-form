@@ -77,7 +77,7 @@ let Button = (
   const LoadingComponent = LoadingProp ? LoadingProp : Loading;
 
   const baseClassName = "form--btn";
-  const className = `${baseClassName} ${classNameProp || ""}`;
+  const className = classNameProp ? classNameProp : baseClassName;
 
   if (loading) {
     return (
