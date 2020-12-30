@@ -11,6 +11,7 @@ module.exports = {
     path: path.join(__dirname, "dist"),
     globalObject: "this",
     filename: "react-wp-form.min.js",
+    chunkFilename: "[name].[chunkhash].js",
   },
 
   module: {
