@@ -81,7 +81,6 @@ export const Label = ({ className = "form--label", children, ...props }) => {
   return (
     <label {...{ className }} {...props}>
       {children}
-      {": "}
     </label>
   );
 };
