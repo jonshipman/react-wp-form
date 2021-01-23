@@ -3,14 +3,13 @@ const path = require("path");
 module.exports = {
   stats: "errors-only",
 
-  entry: "./src/index.js",
+  entry: { main: "./src/index.js" },
 
   output: {
     library: "react-wp-form",
-    libraryTarget: "umd",
+    libraryTarget: "amd",
     path: path.join(__dirname, "dist"),
     globalObject: "this",
-    filename: "react-wp-form.min.js",
   },
 
   module: {
